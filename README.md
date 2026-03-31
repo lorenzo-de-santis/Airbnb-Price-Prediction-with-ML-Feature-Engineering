@@ -8,6 +8,11 @@ The analysis distinguishes between:
 
 * **Hard features** (immutable property characteristics)
 * **Soft features** (host behavior and listing attributes)
+## Dataset
+
+Available on Kaggle:
+https://www.kaggle.com/datasets/lovishbansal123/airbnb-data 
+
 
 ## Approach
 
@@ -61,11 +66,6 @@ The analysis distinguishes between:
 * Location and property size are primary price drivers
 * Host behavior (response rate, policies) impacts pricing in competitive markets
 * Pricing strategies should be city-specific
-
-## Dataset
-
-Available on Kaggle:
-https://www.kaggle.com/datasets/lovishbansal123/airbnb-data 
 
 ## Tech Stack
 
