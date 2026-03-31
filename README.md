@@ -4,69 +4,42 @@
 
 This project focuses on predicting Airbnb listing prices (log-transformed) using machine learning models and feature engineering.
 
-The analysis distinguishes between:
+## Key Contributions
 
-* **Hard features** (immutable property characteristics)
-* **Soft features** (host behavior and listing attributes)
+* Feature engineering with **hard** (immutable property characteristics) and **soft** (host behavior and listing attributes) features
+* KNN-based imputation for missing values
+* Comparison of linear and non-linear models
+* SHAP-based model interpretability
+
 ## Dataset
 
 Available on Kaggle:
 https://www.kaggle.com/datasets/lovishbansal123/airbnb-data 
 
+## Results
 
-## Approach
+* Linear Regression (hard features) → baseline
 
-* Target: log(price)
-* Models:
+* Gradient Boosting (hard features) → improved performance
 
-  * Linear Regression (baseline)
-  * Gradient Boosting Machine (GBM)
-* Data segmented by city for localized modeling
+* Gradient Boosting (hard + soft features) → **best model (R² ≈ 0.75)**
 
-## Key Results
-
-* Linear Regression (hard features) → baseline performance
-
-* GBM (hard features) → improved predictive accuracy
-
-* GBM (hard + soft features) → **best performance (R² ≈ 0.75 across cities)**
-
-* Soft features significantly improve prediction, especially in competitive markets
-
-* Non-linear models outperform linear models by capturing feature interactions
-
-## Feature Engineering
-* Missing values handled using KNN imputation based on feature similarity, including proximity in log price space, to preserve underlying data structure
-
-* Hard features:
-  accommodates · bedrooms · beds · reviews · distance from city center
-
-* Soft features:
-  property type · room type · cancellation policy · host behavior · amenities
-
-## Explainability (SHAP)
-
-* SHAP values used to:
-
-  * identify feature importance
-  * analyze city-specific drivers
 * Key drivers:
 
-  * room type (strongest)
-  * distance from center
+  * room type
+  * distance from city center
   * host behavior features
 
-## Additional Analysis
+## Models
 
-* Text processing on descriptions & amenities
-* No significant improvement in predictive performance
+* Linear Regression
+* Gradient Boosting Machine
 
-## Business Insights
+## Structure
 
-* Location and property size are primary price drivers
-* Host behavior (response rate, policies) impacts pricing in competitive markets
-* Pricing strategies should be city-specific
+* `workflow_Airbnb.knwf` → KNIME workflow
+* `Presentation.pdf` → analysis and results
 
 ## Tech Stack
 
-KNIME · Gradient Boosting · Linear Regression · SHAP · Feature Engineering
+KNIME · Machine Learning · SHAP · Feature Engineering
