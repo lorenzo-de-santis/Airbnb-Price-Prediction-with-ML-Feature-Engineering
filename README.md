@@ -31,6 +31,7 @@ The analysis distinguishes between:
 * Non-linear models outperform linear models by capturing feature interactions
 
 ## Feature Engineering
+* Missing values handled using KNN imputation based on feature similarity, including proximity in log price space, to preserve underlying data structure
 
 * Hard features:
   accommodates · bedrooms · beds · reviews · distance from city center
